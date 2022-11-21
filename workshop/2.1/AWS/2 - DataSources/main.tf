@@ -7,5 +7,5 @@ resource "aws_kinesis_stream" "main" {
     stream_mode = "PROVISIONED"
   }
 
-  kms_key_id = data.aws_kms_key.kinesis_key.id
+  kms_key_id = data.aws_ssm_parameter.kinesis_key.value
 }
