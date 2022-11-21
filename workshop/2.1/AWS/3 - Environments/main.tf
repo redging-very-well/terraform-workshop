@@ -1,7 +1,7 @@
 resource "aws_kinesis_stream" "main" {
-  name             = "${var.pubsub_name}-stream"
+  name             = "${var.env_name}-${var.pubsub_name}-stream"
   shard_count      = 1
-  retention_period = 48
+  retention_period = var.message_ttl
 
   stream_mode_details {
     stream_mode = "PROVISIONED"
