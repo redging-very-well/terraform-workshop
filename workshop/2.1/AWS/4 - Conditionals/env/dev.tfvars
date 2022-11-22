@@ -1,2 +1,2 @@
-env_name = "dev"
+env_name    = "dev"
 message_ttl = 24

@@ -8,6 +8,6 @@ resource "aws_kinesis_stream" "main" {
   }
 
   encryption_type = "KMS"
-  kms_key_id = data.aws_ssm_parameter.kinesis_key.value
+  kms_key_id      = data.aws_ssm_parameter.kinesis_key.value
 
 }
