@@ -1,3 +1,3 @@
 resource "aws_s3_bucket" "this" {
-  bucket = var.name
+  bucket_prefix = var.name
 }
