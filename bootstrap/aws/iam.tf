@@ -34,6 +34,13 @@ resource "aws_iam_user_policy" "workshop" {
       ],
       "Effect": "Allow",
       "Resource": "*"
+    },
+    {
+      "Action": [
+        "ssm:*"
+      ],
+      "Effect": "Allow",
+      "Resource": "*"
     }
   ]
 }
