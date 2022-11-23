@@ -1,13 +1,12 @@
-provider "azurerm" {
-  environment = "public"
-  features    = {}
-}
-
 terraform {
   required_providers {
-    aws = {
+    azurerm = {
       source  = "hashicorp/azurerm"
-      version = ">= 3.0.0"
+      version = "~> 3.32.0"
     }
   }
+}
+
+provider "azurerm" {
+  features {}
 }
